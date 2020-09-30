@@ -7,18 +7,19 @@ function Movie({ id, year, title, summary, poster, genres }) {
     <div className="movie">
       <img src={poster} alt={title} title={title} />
       <div className="movie__data">
-        <h3 className="movie__title">{title}</h3>
+        <h4 className="movie__title">{title}</h4>
         <h5 className="movie__year">{year}</h5>
         <ul className="movie__genres">
           {genres.map((genre, index) => (
             <li className="genres__genre" key={index}>{genre}</li>
           ))}
         </ul>
-        <p className="movie__summary">{summary}</p>
+        <p className="movie__summary">{summary.slice(0, 180)}...</p>
       </div>
     </div>
   );
 }
+//string을 slice -< {stringName}.slice(startIdx,EndIdx) -< 잘라줌
 //map function은 item외에도 item number 인자를 넘겨준다. 보통 index/number 등으로 씀
 //map펑션의 경우 key값이 꼭 필요(구분을 해야하자나)
 //원래 props로 뭉쳐가지고 인자받는데, destruct구조 쓰면 prop내의 원하는 데이터 정확하게 가져올 수 있음

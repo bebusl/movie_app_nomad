@@ -33,7 +33,7 @@ class App extends React.Component {
             <span className="loader_text">Loading...</span>
           </div>
         ) : (
-          <div class="movies">
+          <div className="movies">
             {movies.map((movie) => (
             <Movie
               key={movie.id}
