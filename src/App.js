@@ -15,6 +15,7 @@ class App extends React.Component {
       },
     } = await axios.get("https://yts-proxy.now.sh/list_movies.json");
     //destruct구조로 원하는 데이터만 들고옴
+    this.setState({ movies, isLoading: false });
   };
 
   componentDidMount() {
@@ -23,7 +24,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, movies } = this.state;
     return (
       <div>
         {isLoading
@@ -42,3 +43,5 @@ class App extends React.Component {
     );
   }
 }
+
+export default App;

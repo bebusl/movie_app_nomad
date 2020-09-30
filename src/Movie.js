@@ -10,7 +10,7 @@ Movie.propTypes = {
   id: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
 };
 
